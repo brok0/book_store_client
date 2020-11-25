@@ -7,7 +7,7 @@ export default function AddPrintingModal() {
 	return (
 		<div>
 			<Button
-				className="p-relative "
+				className="mb-2 mr-sm-2"
 				variant="dark"
 				onClick={() => {
 					setShow(true);

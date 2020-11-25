@@ -10,6 +10,7 @@ import {
 } from "react-bootstrap";
 import DeleteBookModal from "./forms/DeleteBookModal";
 import ChangeBookModal from "./forms/formModals/ChangeBookModal";
+
 export default function CardContainer() {
 	const [books, SetBooks] = useState();
 	const [loading, setLoading] = useState(true);
@@ -64,7 +65,7 @@ export default function CardContainer() {
 											</section>
 										</Card.Header>
 										<Card.Body>
-											<Card.Text className="align">
+											<Card.Text className="align" id="pop">
 												<div className="float-right text-left">
 													<section> Pages: {book.pages}</section>
 													<section>Edition: {book.edition}</section>
@@ -77,7 +78,8 @@ export default function CardContainer() {
 													<OverlayTrigger
 														trigger="hover"
 														key="top"
-														placement="top"
+														position="relative"
+														placement="center"
 														overlay={popover}
 													>
 														<button href=""> {book.authorId}</button>
@@ -87,8 +89,9 @@ export default function CardContainer() {
 													<a href=""> {book.printingId}</a>
 												</div>
 												<img
-													src="logo192.png"
+													src="book.jpg"
 													className="rounded float-left "
+													style={{ width: "200px", heigth: "250px" }}
 												></img>
 											</Card.Text>
 										</Card.Body>
@@ -109,7 +112,7 @@ export default function CardContainer() {
 	);
 }
 const popover = (props) => (
-	<Popover id="popover-basic">
+	<Popover id="popover-basic" bsPrefix="hoverpopover">
 		<Popover.Title as="h3">Popover right</Popover.Title>
 		<Popover.Content>
 			And here's some <strong>amazing</strong> content. It's very engaging.

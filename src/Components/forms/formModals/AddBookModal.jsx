@@ -7,7 +7,7 @@ export default function AddBookModal() {
 	return (
 		<div>
 			<Button
-				className="p-relative "
+				className="d-inline"
 				variant="dark"
 				onClick={() => {
 					setShow(true);

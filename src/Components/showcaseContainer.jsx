@@ -7,12 +7,17 @@ import AddBookForm from "./forms/formsContainers/AddBookForm";
 import CardContainer from "./CardContainer";
 export default function ShowcaseContainer() {
 	return (
-		<div className="container">
+		<div className="container ">
 			<hr></hr>
-			<AddBookModal />
-			<AddAuthorModal />
-			<AddPrintingModal />
+
+			<div className="d-inline">
+				<AddBookModal />
+				<AddAuthorModal />
+				<AddPrintingModal />
+			</div>
+
 			<hr></hr>
+
 			<CardContainer />
 		</div>
 	);

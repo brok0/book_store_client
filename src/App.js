@@ -7,7 +7,8 @@ import ShowcaseContainer from "./Components/showcaseContainer";
 function App() {
 	return (
 		<div className="App">
-			<h2>ShowCase</h2>
+			<h2>Internet Book Showcase</h2>
+			<h6>by Boris Hlynsky</h6>
 			<ShowcaseContainer />
 		</div>
 	);
